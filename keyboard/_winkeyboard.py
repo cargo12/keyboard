@@ -542,8 +542,9 @@ def prepare_intercept(callback):
                 if not should_continue:
                     return -1
         except Exception as e:
-            print('Error in keyboard hook:')
-            traceback.print_exc()
+            #print('Error in keyboard hook:')
+            #traceback.print_exc()
+            raise e
 
         return CallNextHookEx(None, nCode, wParam, lParam)
 
